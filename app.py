@@ -13,9 +13,10 @@ def weather():
         response = requests.get(url)
         x = response.json()
         weather = x['main']
+        description = x['weather']
         temp = str((weather['temp'] - 273) * 9/5 + 32) + ' degrees'
-        return temp
-        #return render_template('weather.html', temp = temp)
+        des = str(description[0]['description'])
+        return render_template('weather.html', city=city, temp = temp, des=des)
     else:
         return render_template('location.html')
 

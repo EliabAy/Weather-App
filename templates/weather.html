@@ -3,8 +3,10 @@
 <title>Current Weather</title>
 {% if temp %}
     <h1>Location: {{city}}</h1>
-    <h2>Temp: {{temp}}</h2>>
+    <h2>Current Temperature: {{temp}}</h2>>
+    <h3>Description: {{des}}</h3>
 {% else %}
     <h1>Location: Not Found</h1>
     <h2>Temp: Unknown</h2>
+    <h3>Description: None</h3>
 {% endif %}
