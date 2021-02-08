@@ -1,0 +1,10 @@
+
+<!doctype html>
+<title>Current Weather</title>
+{% if temp %}
+    <h1>Location: {{city}}</h1>
+    <h2>Temp: {{temp}}</h2>>
+{% else %}
+    <h1>Location: Not Found</h1>
+    <h2>Temp: Unknown</h2>
+{% endif %}
